@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "06fbbffe-9adf-4830-9c3d-7cada4ea80b3",
+		"name": "account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26520919"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/account?secret=1234&name=admin",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "secret",
+							"value": "1234",
+							"description": "Пароль"
+						},
+						{
+							"key": "name",
+							"value": "admin",
+							"description": "Имя пользователя"
+						}
+					]
+				},
+				"description": "Создает аккаунт пользователя"
+			},
+			"response": []
+		}
+	]
+}
+{
+	"info": {
+		"_postman_id": "015a8259-d036-45a2-b752-3a0ca27748fb",
+		"name": "note",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26520919"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/note?title=test3&content=cont1&token=b 2 4 g o z 5 7 g 2",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"note"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "test3",
+							"description": "Заголовок заметки"
+						},
+						{
+							"key": "content",
+							"value": "cont1",
+							"description": "Содержание заметки"
+						},
+						{
+							"key": "token",
+							"value": "b 2 4 g o z 5 7 g 2",
+							"description": "Токен пользователя"
+						}
+					]
+				},
+				"description": "Создание заметки"
+			},
+			"response": []
+		},
+		{
+			"name": "get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/note?token=b 2 4 g o z 5 7 g 2&id=2",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"note"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b 2 4 g o z 5 7 g 2",
+							"description": "токен пользователя"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"description": "id заметки"
+						}
+					]
+				},
+				"description": "Подучегие одной заметки по id"
+			},
+			"response": []
+		},
+		{
+			"name": "get list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/note?token=b 2 4 g o z 5 7 g 2",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"note"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b 2 4 g o z 5 7 g 2",
+							"description": "Токен пользователя"
+						}
+					]
+				},
+				"description": "Получение всех заметок пользователя"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/note?token=b 2 4 g o z 5 7 g 2&id=3",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"note"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b 2 4 g o z 5 7 g 2",
+							"description": "Токен пользователя"
+						},
+						{
+							"key": "id",
+							"value": "3",
+							"description": "Id заметки, которую хотим удалить"
+						}
+					]
+				},
+				"description": "Удаление заметки пользователя по id заметки"
+			},
+			"response": []
+		},
+		{
+			"name": "edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/note?id=1&title=NewTitle&content=NewContent&token=b 2 4 g o z 5 7 g 2",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"note"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "Id заметки, которую хотим изменить"
+						},
+						{
+							"key": "title",
+							"value": "NewTitle",
+							"description": "Новый заголовок"
+						},
+						{
+							"key": "content",
+							"value": "NewContent",
+							"description": "Новое содержание"
+						},
+						{
+							"key": "token",
+							"value": "b 2 4 g o z 5 7 g 2",
+							"description": "Токен пользователя"
+						}
+					]
+				},
+				"description": "Редактирование заметки"
+			},
+			"response": []
+		}
+	]
+}
+{
+	"info": {
+		"_postman_id": "d0ab186f-cdd4-4118-a330-1f11d0cae80f",
+		"name": "session",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26520919"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/session?name=admin&secret=1234",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"session"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "admin",
+							"description": "Имя пользователя"
+						},
+						{
+							"key": "secret",
+							"value": "1234",
+							"description": "Пароль"
+						}
+					]
+				},
+				"description": "Создание сессии"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{mobileAPI}}/session?token=7 v u 3 9 3 j n m o",
+					"host": [
+						"{{mobileAPI}}"
+					],
+					"path": [
+						"session"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "7 v u 3 9 3 j n m o",
+							"description": "Удалить токен пользователя"
+						}
+					]
+				},
+				"description": "Удаление сессии"
+			},
+			"response": []
+		}
+	]
+}
